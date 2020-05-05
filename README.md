@@ -6,14 +6,14 @@ Einfacher Webserver für Python Entwickler
 
 
 <h2> Inhalt </h2>
-<p> <a href="#1"> 1. Installation </a> </p> <br><br>
-<p> <a href="#2"> 2. Starten </a> </p> <br>
-<p> <a href="#2.1"> 2.1 Windows </a> </p> <br>
-<p> <a href="#2.2"> 2.2 Mac </a> </p> <br><br>
-<p> <a href="#3"> 3. Verbinden </a> </p> <br><br>
-<p> <a href="#4"> 3. Website erstellen </a> </p> <br><br>
-<p> <a href="#5"> 3. Website einfügen </a> </p> <br><br>
-<p> <a href="#6"> 3. Python Scripts Einfügen </a> </p> <br><br>
+<a href="#1"> 1. Installation </a><br><br>
+<a href="#2"> 2. Starten </a> <br>
+<a href="#2.1"> 2.1 Windows </a> <br>
+<a href="#2.2"> 2.2 Mac </a>  <br><br>
+<a href="#3"> 3. Verbinden </a> <br><br>
+<a href="#4"> 4. Website erstellen </a> <br><br>
+<a href="#5"> 5. Website einfügen </a> <br><br>
+<a href="#6"> 6. Python Scripts Einfügen </a> <br><br>
 
 <hr>
 
