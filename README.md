@@ -6,15 +6,15 @@ Einfacher Webserver für Python Entwickler
 
 
 <h2> Inhalt </h2>
-<a href="#1" style="color: black"> 1. Installation </a><br><br>
-<a href="#2" style="color: black"> 2. Starten </a> <br>
-<a href="#2.1" style="color: black"> 2.1 Windows </a> <br>
-<a href="#2.2" style="color: black"> 2.2 Mac </a>  <br><br>
-<a href="#3" style="color: black"> 3. Verbinden </a> <br><br>
-<a href="#4" style="color: black"> 4. Website erstellen </a> <br><br>
-<a href="#5" style="color: black"> 5. Website einfügen </a> <br><br>
-<a href="#6" style="color: black"> 6. Python Scripts Einfügen </a> <br><br>
-
+<a href="#1" style="color: black;"> 1. Installation </a><br><br>
+<a href="#2" style="color: black;"> 2. Starten </a> <br>
+<a href="#2.1" style="color: black;"> 2.1 Windows </a> <br>
+<a href="#2.2" style="color: black;"> 2.2 Mac </a>  <br><br>
+<a href="#3" style="color: black;"> 3. Verbinden </a> <br><br>
+<a href="#4" style="color: black;"> 4. Website erstellen </a> <br><br>
+<a href="#5" style="color: black;"> 5. Website einfügen </a> <br><br>
+<a href="#6" style="color: black;"> 6. Python Scripts Einfügen </a> <br><br>
+<a href="#7" style="color: black;"> 7. Formulare mit Python </a> <br><br>
 <hr>
 
 
@@ -98,8 +98,8 @@ Jede HTML Komponente der Website muss in den Templates Ordner. Um eine Start Web
 <br>
 <br>
 
-
-
+<h2 id="7"> 7 Formulare Weitergeben </h2>
+Egal ob Get oder Post, alle Formulardaten können von einem Script abgefangen werden. Hierzu muss nur ein Parameter Request ind der run methode erstellt werden. Die Formulardaten werden dann als Dictionary an den requestparameter weitergeben und können von dem Script benutzt werden. zum testen muss der Server neu gestartet werden
 
 
 
