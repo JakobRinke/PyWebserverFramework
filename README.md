@@ -18,7 +18,7 @@ Einfacher Webserver für Python Entwickler
 <a href="#8" style="color: black;"> 8. HyperArgs </a> <br>
 <a href="#8.1" style="color: black;"> 8.1 Warum Hyperargs </a> <br>
 <a href="#8.2" style="color: black;"> 8.2 Einbinden in Python </a> <br>
-<a href="#8.3" style="color: black;"> 8.2 Aufrufen in html </a> <br>
+<a href="#8.3" style="color: black;"> 8.3 Aufrufen in HTML </a> <br>
 
 <hr>
 
