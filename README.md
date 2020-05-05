@@ -15,6 +15,11 @@ Einfacher Webserver für Python Entwickler
 <a href="#5" style="color: black;"> 5. Website einfügen </a> <br><br>
 <a href="#6" style="color: black;"> 6. Python Scripts Einfügen </a> <br><br>
 <a href="#7" style="color: black;"> 7. Formulare mit Python </a> <br><br>
+<a href="#8" style="color: black;"> 8. HyperArgs </a> <br>
+<a href="#8.1" style="color: black;"> 8.1 Warum Hyperargs </a> <br>
+<a href="#8.2" style="color: black;"> 8.2 Einbinden in Python </a> <br>
+<a href="#8.3" style="color: black;"> 8.2 Aufrufen in html </a> <br>
+
 <hr>
 
 
@@ -105,16 +110,16 @@ Egal ob Get oder Post, alle Formulardaten können von einem Script abgefangen we
 <br>
 <br>
 
-<h2 id="7"> 7 Hyper Args </h2>
+<h2 id="7"> 8 Hyper Args </h2>
 
-<h3 id="7.1"> 7.1 Was ist HyperArgs? </h3> <br>
+<h3 id="7.1"> 8.1 Was ist HyperArgs? </h3> <br>
 Angenommen man schreibt ein Script, welches Bilder aus einen Ordner ausließt und diese dann mit einem Image Tag aufruft. Jetzt will man dieses Script aber für 2 Verschiede Ordner auf 2 Verschiedenen Websites ausführen. Wenn man nicht zwei Scripts schreiben möchte, sind HyperArgs die Lösung. Hyper Args bietet die Möglichkeit, Parameter über den Html Code an Python Scripts zu übergeben.
 <br>
 <br>
-<h3 id="7.2"> 7.2 Einbindung in das Script </h3> <br>
+<h3 id="7.2"> 8.2 Einbindung in das Script </h3> <br>
 Um Hyper Args zu einem Script hinzuzufügen, muss man einen weiteren Parameter  hyper = {}   erstellen. Dieses Dictionary enthält alle Daten die über HyperArgs übergeben werden.
 <br><br>
-<h3 id="7.3"> 7.3 Aufrufen in HTML </h3> <br>
+<h3 id="7.3"> 8.3 Aufrufen in HTML </h3> <br>
 Die Einbindung funktioniert zunächst wie eine normale Einbindung (  {|SCRIPT|}  ). Die Einbindung hier funktioniert so: <br>
 <h5> {|SCRIPT?PARAMETER1=WERT1&PARAMETER2=WERT2&PARAMETER3=WERT3|} </h5>
 
