@@ -1,7 +1,7 @@
 
 JWebServer 1.0.zip 
-Scripts
-__pycache__
+Scripts/*
+__pycache__/*
 config/config.txt
 
 
