@@ -6,14 +6,14 @@ Einfacher Webserver für Python Entwickler
 
 
 <h2> Inhalt </h2>
-<a href="#1"> 1. Installation </a><br><br>
-<a href="#2"> 2. Starten </a> <br>
-<a href="#2.1"> 2.1 Windows </a> <br>
-<a href="#2.2"> 2.2 Mac </a>  <br><br>
-<a href="#3"> 3. Verbinden </a> <br><br>
-<a href="#4"> 4. Website erstellen </a> <br><br>
-<a href="#5"> 5. Website einfügen </a> <br><br>
-<a href="#6"> 6. Python Scripts Einfügen </a> <br><br>
+<a href="#1" style="color: black"> 1. Installation </a><br><br>
+<a href="#2" style="color: black"> 2. Starten </a> <br>
+<a href="#2.1" style="color: black"> 2.1 Windows </a> <br>
+<a href="#2.2" style="color: black"> 2.2 Mac </a>  <br><br>
+<a href="#3" style="color: black"> 3. Verbinden </a> <br><br>
+<a href="#4" style="color: black"> 4. Website erstellen </a> <br><br>
+<a href="#5" style="color: black"> 5. Website einfügen </a> <br><br>
+<a href="#6" style="color: black"> 6. Python Scripts Einfügen </a> <br><br>
 
 <hr>
 
@@ -73,7 +73,7 @@ Jede HTML Komponente der Website muss in den Templates Ordner. Um eine Start Web
 1. Erstelle eine neue html Datei im Templates/Protected Ordner. Schreibe einen Bespieltext in diese Website. Auf diese Website kann niemand direkt zugreifen.
 <br>
 <br>
-2. Schreibe [|NAME|] in deine index Datei wobei du das NAME durch den Namen der Datei ersetzt, die in Schritt 1 erstellt wurde (mit Dateiendung).
+2. Schreibe [|NAME|] in deine index Datei, wobei du das NAME durch den Namen der Datei ersetzt, die in Schritt 1 erstellt wurde (mit Dateiendung).
 <br>
 <br>
 3. Wenn man die Website jetzt neulädt, wird der [|NAME|] Aufruf durch den Inhalt der im Protected Ordner liegenden Website ausgetauscht
@@ -84,7 +84,19 @@ Jede HTML Komponente der Website muss in den Templates Ordner. Um eine Start Web
 <br>
 <br>
 <h2 id="6"> 6 Python Scripts Einfügen </h2>
-
+1. Erstelle ein Python Script mit einer run Methode, in der ein String zurückgegeben wird
+<br>
+<br>
+2. Schreibe [|NAME|] in deine index Datei, wobei du das NAME durch den Namen des Scripts ersetzt, die in Schritt 1 erstellt wurde (ohne Dateiendung) und starte den Webserver neu.
+<br>
+<br>
+3. Wenn man die Website jetzt neulädt, wird der [|NAME|] Aufruf durch den Inhalt die Rückgabe der run Methode ersetzt
+<br>
+<br>
+4. Einen solchen Aufruf kann man mehrmals in einer Website und auch mit verschieden Scripts tätigen
+<br>
+<br>
+<br>
 
 
 
