@@ -1,3 +1,9 @@
+
+
+
+
+
+
 from JWebServer.DefFunc import FileHandleFuncs as fhf
 from _collections import defaultdict
 import os
@@ -104,16 +110,17 @@ def load():
 
 
     scripts = fhf.getListOfFiles("./Scripts", ".py")
-    print(scripts)
     for Script in scripts:
         try:
             Script = Script.replace("\n", "").replace(".py","").replace("./Scripts\\","")
-            print(Script)
+          
             Scripts[Script] = fhf.imp("Scripts." + Script)
-        except Exception as e:
+            print("Eigenes Script gefunden:  " + Script)
+        except Exception as e:		
+            print("Fehler beim Script  " + Script + "   :")
             print(e)
 
-    print(Scripts)
+
 
     for f in fhf.getListOfFiles("./Templates/Protected"):
         Prot.append(os.path.relpath(f, "./Templates/Protected").replace("\\", "/"))
