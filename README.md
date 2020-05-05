@@ -1,24 +1,33 @@
 
 
-
-
-
 # JPyFramework
 Einfacher Webserver für Python Entwickler
+
+
+
+<h2> Inhalt </h2>
+<p> <a href="#1"> 1. Installation </a> </p> <br><br>
+<p> <a href="#2"> 2. Starten </a> </p> <br>
+<p> <a href="#2.1"> 2.1 Windows </a> </p> <br>
+<p> <a href="#2.2"> 2.2 Mac </a> </p> <br><br>
+<p> <a href="#3"> 3. Verbinden </a> </p> <br><br>
+<p> <a href="#4"> 3. Website erstellen </a> </p> <br><br>
+<p> <a href="#5"> 3. Website einfügen </a> </p> <br><br>
+<p> <a href="#6"> 3. Python Scripts Einfügen </a> </p> <br><br>
 
 <hr>
 
 
-<h2> 1 Installation </h2>
+<h2 id="1"> 1 Installation </h2>
 
 Damit der Webserver funktioniert, muss die neuste Version von Python 3 installiert sein. 
 Diese kann ist <a href="https://www.python.org/downloads/">hier</a> verfügbar.
 Danach muss man sich nur noch die neuste Version dieses Webservers herunterladen und entpacken.
 <br><br><br>
 
-<h2> 2 Starten </h2>
+<h2 id="2"> 2 Starten </h2>
 
-<h3> 2.1 Windows </h3> <br>
+<h3 id="2.1"> 2.1 Windows </h3> <br>
 1. Öffne die start.bat
 <br>
 <br>
@@ -32,7 +41,7 @@ Danach muss man sich nur noch die neuste Version dieses Webservers herunterladen
 <br>
 <br> 
 <br>
-<h3> 2.2 Mac </h3> <br>
+<h3 id="2.2"> 2.2 Mac </h3> <br>
 1. Drücke Rechtsklick auf die start.sh, öffnen mit, wähle alle Programme aus, 
 aktiviere immer öffnen mit und suche nach dem Programm Terminal.
 <br>
@@ -48,10 +57,40 @@ aktiviere immer öffnen mit und suche nach dem Programm Terminal.
 <br> 
 <br>
 
-<h2> 3 Verbinden mit dem Webserver </h2>
+<h2 id="3"> 3 Verbinden mit dem Webserver </h2>
 Wenn der Server sich gestartet hat, kann man sich mit der Url: <a href="http://localhost">localhost</a> zu verbinden 
 <br>
 <br> 
 <br>
+
+<h2 id="4"> 4 Erstellen einer Website </h2>
+Jede HTML Komponente der Website muss in den Templates Ordner. Um eine Start Website zu erstellen muss man eine index.html datei im Templates Ordner erstellen. Wenn man jetzt Schritt 3 erneut ausführt (sich neu Verbindet) wird die Index Datei angezeigt. Wenn das nicht sofort klappt muss man den Webserver neu laden
+<br>
+<br> 
+<br>
+
+<h2 id="5"> 5 Websites ineinander einfügen </h2>
+1. Erstelle eine neue html Datei im Templates/Protected Ordner. Schreibe einen Bespieltext in diese Website. Auf diese Website kann niemand direkt zugreifen.
+<br>
+<br>
+2. Schreibe [|NAME|] in deine index Datei wobei du das NAME durch den Namen der Datei ersetzt, die in Schritt 1 erstellt wurde (mit Dateiendung).
+<br>
+<br>
+3. Wenn man die Website jetzt neulädt, wird der [|NAME|] Aufruf durch den Inhalt der im Protected Ordner liegenden Website ausgetauscht
+<br>
+<br>
+4. Einen solchen Aufruf kann man mehrmals in einer Website und auch mit verschieden Websites tätigen
+<br>
+<br>
+<br>
+<h2 id="6"> 6 Python Scripts Einfügen </h2>
+
+
+
+
+
+
+
+
 
 
