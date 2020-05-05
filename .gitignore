@@ -3,9 +3,9 @@ JWebServer 1.0.zip
 Scripts/*
 __pycache__
 __pycache__/*
-config/config.txt
-config/error.txt
-config/
+config/*
+!config/__init__.py
+
 JWebServer/__pycache__
 JWebServer/RequestParser/__pycache__
 JWebServer/__pycache__/*
