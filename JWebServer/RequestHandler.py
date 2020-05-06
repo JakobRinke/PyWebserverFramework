@@ -35,8 +35,7 @@ class MainRequestHandler (BaseHTTPRequestHandler):
         type = self.headers["Content-Type"]
 
         if "multipart/form-data" in type.split("; ")[0]:
-            all = self.HandleFile( type.split("; ")[1].split("=")[1].encode())
-            print(all)
+            args = self.HandleFile( type.split("; ")[1].split("=")[1].encode())
         else:
             len = int(self.headers["Content-Length"])
             s = self.rfile.read(len)
@@ -47,8 +46,9 @@ class MainRequestHandler (BaseHTTPRequestHandler):
                 for arg in str(s).split("&"):
                     self.args[str(arg.split("=")[0]).replace("b'","").replace("'","")] = str(arg.split("=")[1]).replace("-b'","").replace("'","")
 
-        except:
-            pass
+        except Exception as e:
+            print(e)
+
 
         if self.path.endswith(".png") or self.path.endswith(".gif") or self.path.endswith(".jpg"):
             self.SendImage("Templates/" + self.path)

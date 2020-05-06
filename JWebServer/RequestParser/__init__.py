@@ -17,7 +17,6 @@ except:
 def EditSite(Website, args):
 
 
-
     Locked_Sites = defaultdict(lambda: 0)
     Locked_Scripts = defaultdict(lambda: 0)
 
@@ -63,10 +62,12 @@ def EditSite(Website, args):
 
 
                # print (config.Scripts)
+
                 for Script in config.Scripts.keys():
                     if "{|" + Script + "|}" in Website and Locked_Scripts[Script] <= config.IncProtection:
 
                         try:
+
                             Website = Website.replace("{|" + Script + "|}", "\n" + config.Scripts[Script].run(request=args))
                         except:
                             try:
