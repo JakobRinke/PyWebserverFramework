@@ -11,3 +11,5 @@ JWebServer/RequestParser/__pycache__
 JWebServer/__pycache__/*
 JWebServer/RequestParser/__pycache__/*
 
+.idea
+.idea/*
