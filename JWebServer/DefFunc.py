@@ -25,7 +25,7 @@ class FileHandleFuncs:
         ret = []
         for root, dirs, files in os.walk(dirName):
             for file in files:
-                if filter == "" or filter in file:
+                if filter == "" or file.endswith(filter):
                     ret.append(os.path.join(root, file))
         return ret
 

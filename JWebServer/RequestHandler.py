@@ -6,7 +6,7 @@ from JWebServer.DefFunc import FileHandleFuncs as Functions
 
 import JWebServer.RequestParser as rp
 
-
+import re
 
 
 
@@ -28,12 +28,24 @@ class MainRequestHandler (BaseHTTPRequestHandler):
 
     def do_POST(self):
 
-        length = self.headers["content-length"]
-        s = self.rfile.read(int(length))
+        #length = self.headers["content-length"]
+        #s = self.rfile.read(int(length))
+        s = ""
         self.args = {}
+        type = self.headers["Content-Type"]
+
+        if "multipart/form-data" in type.split("; ")[0]:
+            all = self.HandleFile( type.split("; ")[1].split("=")[1].encode())
+            print(all)
+        else:
+            len = int(self.headers["Content-Length"])
+            s = self.rfile.read(len)
+
+
         try:
-            for arg in str(s).split("&"):
-                self.args[str(arg.split("=")[0]).replace("b'","").replace("'","")] = str(arg.split("=")[1]).replace("-b'","").replace("'","")
+            if s!="":
+                for arg in str(s).split("&"):
+                    self.args[str(arg.split("=")[0]).replace("b'","").replace("'","")] = str(arg.split("=")[1]).replace("-b'","").replace("'","")
 
         except:
             pass
@@ -77,3 +89,47 @@ class MainRequestHandler (BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=' + encoding)
         self.end_headers()
 
+
+
+    def HandleFile(self, boundary):
+
+
+        remainbytes = int(self.headers['content-length'])
+        line = self.rfile.readline()
+        remainbytes -= len(line)
+        if not boundary in line:
+            print("No Boundary")
+            return "no boundary"
+
+        args = {}
+        next = ""
+        all = "".encode()
+        while remainbytes > 0:
+
+            line = self.rfile.readline()
+            remainbytes -= len(line)
+            if line.decode()=="":
+                pass
+
+            elif line.decode().startswith("Content"):
+                if line.decode().startswith("Content-Disposition"):
+                    next = line.decode().replace('Content-Disposition: form-data; name="', '').replace('"; filename=""\r\n', '').split("\"")[0]
+
+
+            elif boundary in line:
+                #preline = line[0:-1]
+                if line.decode().endswith('\r'):
+                    line = line[0:-1]
+                #all += line.decode()
+
+                args[next] = all[2:-2]
+                all = "".encode()
+
+                next = ""
+            elif line.decode != "\r\n":
+
+                all += line
+
+
+
+        return args

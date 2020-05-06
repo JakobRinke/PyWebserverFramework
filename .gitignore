@@ -11,5 +11,10 @@ JWebServer/RequestParser/__pycache__
 JWebServer/__pycache__/*
 JWebServer/RequestParser/__pycache__/*
 
+Templates
+Templates/*
+
 .idea
 .idea/*
+/.idea/*
+.idea/workspace/*

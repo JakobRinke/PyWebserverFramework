@@ -62,7 +62,7 @@ def EditSite(Website, args):
                         Website = Website.replace("[|" + Path + "|]", "")
 
 
-                print (config.Scripts)
+               # print (config.Scripts)
                 for Script in config.Scripts.keys():
                     if "{|" + Script + "|}" in Website and Locked_Scripts[Script] <= config.IncProtection:
 
