@@ -112,7 +112,7 @@ def load():
     scripts = fhf.getListOfFiles("./Scripts", ".py")
     for Script in scripts:
         try:
-            Script = Script.replace("\n", "").replace(".py","").replace("./Scripts\\","")
+            Script = Script.replace("\n", "").replace(".py","").replace("./Scripts\\","").replace("./Scripts/","")
           
             Scripts[Script] = fhf.imp("Scripts." + Script)
             print("Eigenes Script gefunden:  " + Script)
@@ -130,7 +130,7 @@ def load():
         Temp.append(os.path.relpath(f, "./Templates").replace("\\", "/"))
 
 
-    if reload<0:
+    if reload > 0:
         Thr = Thread(target=Reload, args=(reload))
         Thr.start()
 
