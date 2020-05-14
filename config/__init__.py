@@ -131,7 +131,7 @@ def load():
 
 
     if reload > 0:
-        Thr = Thread(target=Reload, args=(reload))
+        Thr = Thread(target=Reload, args=[reload])
         Thr.start()
 
 
