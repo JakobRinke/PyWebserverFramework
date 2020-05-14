@@ -7,6 +7,7 @@ try:
 except:
 	os.system("py -3 -m pip install pynput")
 	os.system("python -m pip install pynput")
+	os.system("python3 -m pip install pynput")
 	from pynput import keyboard
 	
 import subprocess

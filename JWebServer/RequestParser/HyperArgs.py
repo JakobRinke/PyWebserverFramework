@@ -7,12 +7,16 @@ changed = False
 def GetHyperArgs (Website, args, Locked_Sites,  Locked_Scripts, Scripts, IncMax, Prot ,Sites):
     LockedArgs = defaultdict(lambda: 0)
     changed = True
+	
     while changed == True:
         changed = False
-        Website, Locked_Scripts = GetHyperArgsScript(Website, Locked_Scripts, IncMax, args, Scripts)
-        Website, Locked_Sites = GetHyperArgsProt(Website, Locked_Sites, IncMax,  Prot)
-        Website, Locked_Sites = GetHyperArgsWebsite(Website, Locked_Sites, IncMax, Sites)
-        Website, LockedArgs = GetRequestArgs(Website,IncMax, args, LockedArgs)
+		try:
+            Website, Locked_Scripts = GetHyperArgsScript(Website, Locked_Scripts, IncMax, args, Scripts)
+            Website, Locked_Sites = GetHyperArgsProt(Website, Locked_Sites, IncMax,  Prot)
+            Website, Locked_Sites = GetHyperArgsWebsite(Website, Locked_Sites, IncMax, Sites)
+            Website, LockedArgs = GetRequestArgs(Website,IncMax, args, LockedArgs)
+		except:
+			pass
     return Website
 
 
