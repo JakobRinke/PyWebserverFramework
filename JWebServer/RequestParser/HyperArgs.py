@@ -10,13 +10,13 @@ def GetHyperArgs (Website, args, Locked_Sites,  Locked_Scripts, Scripts, IncMax,
 	
     while changed == True:
         changed = False
-		try:
+        try:
             Website, Locked_Scripts = GetHyperArgsScript(Website, Locked_Scripts, IncMax, args, Scripts)
             Website, Locked_Sites = GetHyperArgsProt(Website, Locked_Sites, IncMax,  Prot)
             Website, Locked_Sites = GetHyperArgsWebsite(Website, Locked_Sites, IncMax, Sites)
             Website, LockedArgs = GetRequestArgs(Website,IncMax, args, LockedArgs)
-		except:
-			pass
+        except:
+            pass
     return Website
 
 
