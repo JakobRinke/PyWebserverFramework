@@ -1,5 +1,4 @@
 
-
 # JPyFramework
 Einfacher Webserver für Python Entwickler
 
@@ -21,7 +20,6 @@ Einfacher Webserver für Python Entwickler
 <a href="#8.3" style="color: black;"> 8.3 Aufrufen in HTML </a> <br><br>
 
 <hr>
-
 
 <h2 id="1"> 1 Installation </h2>
 
@@ -122,7 +120,4 @@ Um Hyper Args zu einem Script hinzuzufügen, muss man einen weiteren Parameter  
 <h3 id="8.3"> 8.3 Aufrufen in HTML </h3> <br>
 Die Einbindung funktioniert zunächst wie eine normale Einbindung (  {|SCRIPT|}  ). Die Einbindung hier funktioniert so: <br>
 <h5> {|SCRIPT?PARAMETER1=WERT1&PARAMETER2=WERT2&PARAMETER3=WERT3|} </h5>
-
-
-
 
