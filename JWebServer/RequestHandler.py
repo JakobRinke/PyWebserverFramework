@@ -13,14 +13,16 @@ import re
 
 
 
-
+IMAGE_ENDS = [
+    "png", "gif", "jpg", "jpeg"
+]
 
 class MainRequestHandler (BaseHTTPRequestHandler):
 
     def do_GET(self):
         self.ParseArgs()
 
-        if self.path.endswith(".png") or self.path.endswith(".gif") or self.path.endswith(".jpg"):
+        if True in [self.path.endswith("."+k) for k in IMAGE_ENDS]:
             self.SendImage("Templates/" + self.path)
         else:
             Code, Site = rp.getSite(path=self.path, args=self.args)
